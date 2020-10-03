@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-ios.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Dogs Day Challange Day 1</title>
+</head>
+
+<body>
+    <h2>
+        <div id="dog-name-sticky">Dogs Day</div>
+    </h2>
+
+    <ul class="nav-bar">
+        <li class="list active"><a href="index.html">Home</a></li>
+        <li class="list"><a href="underdev.html">News</a></li>
+        <li class="list"><a href="underdev.html">Contact</a></li>
+        <li class="list"><a href="underdev.html">About</a></li>
+        <li class="list"><a href="underdev.html">More</a></li>
+    </ul>
+
+    <div class="gallery-margin">
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="dog1.html">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="image of Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Golden_Retriever">
+                    <div class="desc">Golden Retriever</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="dog2.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/German_Shepherd_-_DSC_0346_%2810096362833%29.jpg" alt="German Shepherd image" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/German_Shepherd">
+                    <div class="desc">German Shepherd</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="dog3.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bichon_Fris%C3%A9_-_studdogbichon.jpg/1200px-Bichon_Fris%C3%A9_-_studdogbichon.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Bichon_Frise">
+                    <div class="desc">Bichon Frise</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23096_affenpinscher-460x290.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/affenpinscher">
+                    <div class="desc">Affenpinscher</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23004_afghan-hound-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/afghan-hound#/slide/1">
+                    <div class="desc">Afghan Hound</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23052_pitbull-dog-breed-pittie-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/american-water-spaniel">
+                    <div class="desc">American Pit Bull Terrier</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/08/american-pugabull-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/american-pugabull">
+                    <div class="desc">American Pugabull</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/11/rottador-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/rottador">
+                    <div class="desc">Rottador</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_22944_saint-bernard-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/saint-bernard">
+                    <div class="desc">Saint Bernard</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23198_shetland-sheepdog-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/shetland-sheepdog">
+                    <div class="desc">Shetland Sheepdog</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23158_schipperke-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/schipperke">
+                    <div class="desc">Schipperke</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23126_shih-tzu-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/shih-tzu">
+                    <div class="desc">Shih Tzu</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23166_australian-cattle-dog-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/australian-cattle-dog">
+                    <div class="desc">Australian Cattle Dog</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/09/borador-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/borador">
+                    <div class="desc">Borador</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2020/03/puginese-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/puginese">
+                    <div class="desc">Puginese</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2020/03/pyredoodle-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://www.dogtime.com/assets/uploads/2020/03/pyredoodle-mixed-dog-breed-pictures-cover-650x368.jpg">
+                    <div class="desc">Pyredoodle</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2020/08/Pyrenean-Mastiff-Dog-Breed-Pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/pyrenean-mastiff">
+                    <div class="desc">Pyrenean Mastiff</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23246_pyrenean-shepherd-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/pyrenean-shepherd">
+                    <div class="desc">Pyrenean Shepherd</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23248_redbone-coonhound-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/redbone-coonhound">
+                    <div class="desc">Redbone Coonhound</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/08/saint-berdoodle-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/saint-berdoodle">
+                    <div class="desc">Saint Berdoodle</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_22944_saint-bernard-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/saint-bernard">
+                    <div class="desc">Saint Bernard</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23044_saluki-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/saluki">
+                    <div class="desc">Saluki</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23084_sealyham-terrier-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/sealyham-terrier">
+                    <div class="desc">Sealyham Terrier</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23198_shetland-sheepdog-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/shetland-sheepdog">
+                    <div class="desc">Shetland Sheepdog</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/07/shih-poo-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/shiranian">
+                    <div class="desc">Shiranian</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/11/shollie-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/shollie">
+                    <div class="desc">Shollie</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/08/shorkie-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/shorkie">
+                    <div class="desc">Shorkie</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23128_silky-terrier-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/small-munsterlander-pointer">
+                    <div class="desc">Silky Terrier</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2020/01/spanish-mastiff-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/spanish-mastiff">
+                    <div class="desc">Spanish Mastiff</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23256_small-munsterlander-pointer-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/small-munsterlander-pointer">
+                    <div class="desc">Small Munsterlander Pointer</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2018/08/spinone-italiano-dog-breed-pictures-header-300x170.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/spinone-italiano">
+                    <div class="desc">Spinone Italiano</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2019/11/springador-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/springador">
+                    <div class="desc">Springador</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23264_Stabyhoun-dog-breed-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/stabyhoun">
+                    <div class="desc">Stabyhoun</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_22950_standard-schnauzer-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/standard-schnauzer">
+                    <div class="desc">Standard Schnauzer</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_22994_sussex-spaniel-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/sussex-spaniel">
+                    <div class="desc">Sussex Spaniel</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2014/06/file_23298_Swedish-Vallhund-dog-breed-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/swedish-vallhund">
+                    <div class="desc">Swedish Vallhund</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2020/07/taiwan-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/taiwan-dog">
+                    <div class="desc">Taiwan Dog</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2020/01/terripoo-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/terripoo">
+                    <div class="desc">Terripoo</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2020/02/texas-heeler-mixed-dog-breed-pictures-cover-650x368.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/texas-heeler">
+                    <div class="desc">Texas Heeler</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23164_tibetan-terrier-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/tibetan-terrier">
+                    <div class="desc">Tibetan Terrier</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="responsive">
+            <div class="dog-gallery">
+                <a href="underdev.html">
+                    <img src="https://www.dogtime.com/assets/uploads/2011/01/file_23130_toy-fox-terrier-300x189.jpg" alt="image of a Dog" class="dog-gallery-image">
+                </a>
+                <a target="_blank" href="https://dogtime.com/dog-breeds/toy-fox-terrier">
+                    <div class="desc">Toy Fox Terrier</div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<!-- <div class="container">
+    <div class="images">
+        <a href="dog1.html"><img id="image1" src="https://www.prestigeanimalhospital.com/sites/default/files/styles/large/adaptive-image/public/golden-retriever-dog-breed-info.jpg?itok=scGfz-nI" alt="Golden Retriever image"></a>
+        <a href="https://en.wikipedia.org/wiki/Golden_Retriever" target="_blank">
+            <div id="name">Golden Retriever</div>
+        </a>
+    </div>
+    <div class="images">
+        <a href="dog2.html"><img id="image1" src="https://upload.wikimedia.org/wikipedia/commons/d/d0/German_Shepherd_-_DSC_0346_%2810096362833%29.jpg" alt="German Shepherd image"></a>
+        <a href="https://en.wikipedia.org/wiki/German_Shepherd" target="_blank">
+            <div id="name">German Shepherd</div>
+        </a>
+    </div>
+    <div class="images">
+        <a href="dog3.html"><img id="image1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bichon_Fris%C3%A9_-_studdogbichon.jpg/1200px-Bichon_Fris%C3%A9_-_studdogbichon.jpg" alt="Bichon Frise image"></a>
+        <a href="https://en.wikipedia.org/wiki/Bichon_Frise" target="_blank">
+            <div id="name">Bichon Frise</div>
+        </a>
+    </div>
+</div> -->
